@@ -1,11 +1,18 @@
 .TodoItem {
-  background-color: #FAFAFA;
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 1;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 24px;
   box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+  border: none;
+  box-shadow: inset 0 0 10px #fff, 0 0 10px #fff, 0 0 20px rgb(175, 9, 204), 0 0 40px rgb(163, 17, 208), 0 0 80px rgb(189, 13, 221);
+  border-radius: 15px;
+  
+  
+
 }
 
 .TodoItem-p {
@@ -14,6 +21,7 @@
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
+  color: azure;
 }
 .TodoItem-p--complete {
   text-decoration: line-through;

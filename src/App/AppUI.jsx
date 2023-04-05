@@ -7,6 +7,8 @@ import { TodoContext } from "../TodoContext";
 import { CreateTodoButton } from "../CreateTodoButton";
 import { Modal } from "../modal";
 import { TodoForm } from "../TodoForm";
+import { TodoLoading } from "../TodoLoading";
+import './App.css'
 
 function AppUI() {
   const {
@@ -25,8 +27,8 @@ function AppUI() {
 
       <TodoList>
         {error && <p>oh oh alerta por subnormal</p>}
-        {loading && <p>Loading....</p>}
-        {!loading && !searchedTodos.length && <p>Crea tu primera tarea</p>}
+        {loading && <TodoLoading/>}
+        {!loading && !searchedTodos.length && <p className="primer-todo">Crea tu primera tarea</p>}
         {searchedTodos.map((todo) => (
           <TodoItem
             key={todo.text}

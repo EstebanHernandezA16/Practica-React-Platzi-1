@@ -33,8 +33,14 @@ function TodoProvider(props) {
 
     if (newTodos[todoIndex].completed == true) {
       newTodos[todoIndex].completed = false;
+      alert(
+        "Tarea " + newTodos[todoIndex].text.toLowerCase() + " desmarcada"
+      ); /*Comentar linea si se vuelve pesado el tener que darle aceptar*/
     } else {
       newTodos[todoIndex].completed = true;
+      alert(
+        "Ya completaste la tarea de " + newTodos[todoIndex].text.toLowerCase()
+      ); /*Comentar linea si se vuelve pesado el tener que darle aceptar*/
     }
     saveTodos(newTodos);
   };
@@ -42,9 +48,9 @@ function TodoProvider(props) {
   const addTodo = (text) => {
     const newTodos = [...todos];
     newTodos.push({
-    completed: false,
-    text: text
-        });
+      completed: false,
+      text: text,
+    });
     saveTodos(newTodos);
   };
 
@@ -69,7 +75,6 @@ function TodoProvider(props) {
         deleteTodo,
         openModal,
         setOpenModal,
-
       }}
     >
       {props.children}

@@ -1,7 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  background: #F2F4F5;
+ /* background: #7e09de;*/
+ background-image: url('../public/background2.gif');
+ background-repeat: no-repeat;
+ background-size: cover;
+ 
+ animation: animateBackground 10s infinite;
   color: #1E1E1F;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
@@ -10,4 +15,5 @@ body {
   margin: 0 24px;
   position: relative;
   min-height: 100vh;
+  
 }

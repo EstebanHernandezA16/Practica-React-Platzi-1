@@ -24,7 +24,7 @@ function TodoForm() {
       <textarea
         value={newTodoValue}
         onChange={onChange}
-        placeholder="Hacer Tarea 1"
+        placeholder="Completar Curso React"
       />
       <div className="TodoForm-buttonContainer ">
         <button
